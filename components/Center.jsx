@@ -1,4 +1,4 @@
-import { ChevronDownIcon } from '@heroicons/react/outline'
+import { LogoutIcon } from '@heroicons/react/outline'
 import { signOut, useSession } from 'next-auth/react'
 import React, { useEffect, useState } from 'react'
 import { shuffle } from 'lodash'
@@ -21,6 +21,7 @@ const Center = () => {
   const spotifyApi = useSpotify()
   const { data: session } = useSession()
   const [color, setColor] = useState(null)
+  const [user, setUser] = useState({})
   const playlistId = useRecoilValue(playlistIdState)
   const [playlist, setPlaylist] = useRecoilState(playlistState)
 
@@ -33,7 +34,12 @@ const Center = () => {
       .getPlaylist(playlistId)
       .then((data) => setPlaylist(data.body))
       .catch((error) => console.log('Something went wrong..', error))
+    spotifyApi
+      .getUser(session.user.username)
+      .then((data) => setUser(data.body))
+      .catch((err) => console.log(err))
   }, [spotifyApi, playlistId])
+
   return (
     <div className="h-screen flex-grow overflow-y-scroll text-white scrollbar-hide">
       <header className="absolute top-5 right-8">
@@ -41,14 +47,13 @@ const Center = () => {
           className="flex cursor-pointer items-center space-x-3 rounded-full bg-black p-1 pr-2 opacity-90 hover:opacity-80"
           onClick={signOut}
         >
-          {/* //Spotify Api dose'nt live update hence, static username and image */}
           <img
-            src={`https://avatars.githubusercontent.com/u/60750929?v=4`}
+            src={user.images?.[0]?.url}
             alt="user-image"
             className="h-10 w-10 rounded-full"
           />
-          <h2>Saif Narpali</h2>
-          <ChevronDownIcon className="h-5 w-5" />
+          <h2>{user.display_name}</h2>
+          <LogoutIcon className="button" />
         </div>
       </header>
 
