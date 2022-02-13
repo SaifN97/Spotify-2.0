@@ -1,27 +1,58 @@
-# Next.js + Tailwind CSS Example
+# Spotify 2.0
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+## Table of contents
 
-## Preview
+- [Overview](#overview)
+  - [Preview](#preview)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+## Overview
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+### Preview
 
-## Deploy your own
+![Finished Preview of ShareMe Social](./public/preview.jpg)
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+### Links
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+- Live Site URL: [Spotify 2.0](https://spotify-2-0-eight.vercel.app)
 
-## How to use
+## My process
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+### Built with
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+- NextJs
+- Recoil
+- Spotify API
+- Tailwind CSS
+- Mobile first workflow
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+### What I learned
+
+- Some hands on experience creating responsive layout with Tailwind CSS in Nextjs framework.
+- Managing App wide state with recoil
+- Fetching application data with SSR & SSG .
+- Nextjs folder and project structure
+
+### Continued development
+
+1. Nextjs
+1. TailwindCSS
+1. Consuming APIs
+
+### Useful resources
+
+- [Conquering Responsive Layouts](https://courses.kevinpowell.co) - This helped me to have a deeper understanding of making responsive layouts
+- [JavaScript Mastery](https://www.youtube.com/channel/UCmXmlB4-HJytD7wek0Uo97A) - Adrian Hajdin has been an excellent resource to help me practice with great and professional projects, check out his YouTube Channel for more..
+- [Kevin Powell](https://www.youtube.com/watch?v=0ohtVzCSHqs&t=1s) - Kevin is the reason why i started using mobile first approach after watching this video where he explains how websites are responsive by default and its us who make it not responsive also his channel is a great resource for quick css tips and tricks!
+
+## Author
+
+- Frontend Mentor - [@SaifN97](https://www.frontendmentor.io/profile/SaifN97)
+- Instagram - [@saif.codes\_](https://www.instagram.com/saif.codes_)
+- Twitter - [@NarpaliSaif](https://twitter.com/NarpaliSaif)
